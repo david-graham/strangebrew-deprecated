@@ -1,0 +1,90 @@
+/**
+* Archives
+* --------------------------------------------------------------------------- */
+ 
+.archive-header {
+	margin-bottom: 3rem;
+	padding: 4.5rem 3rem 3.375rem;
+	border-bottom: 1px solid $border-color;
+	text-align: center;
+
+	p { margin-bottom: 0.75rem; }
+}
+
+@media screen and (max-width: 640px) {
+	.archive-header { 
+		padding: 2.25rem 0 1.5rem;
+	}
+}
+
+.entry-byline,
+.entry-footer {
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	line-height: 1.65;
+	text-align: center; 
+}
+
+.plural {
+
+	#content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.archive-header { width: 100%; }
+
+	.entry {
+		flex-grow: 1;
+		width: 27.5%;
+		margin: 0 1rem 3rem;
+		text-align: center;
+	}
+
+	@media screen and ( max-width: 960px ) {
+		.entry { width: 40%; }
+	}
+
+	@media screen and ( max-width: 640px ) {
+		.entry { width: 100%; }
+	}
+
+		.featured-media {
+			margin: 0 auto 1.5rem;
+
+			img {
+				margin: auto;
+				outline: 6px solid $border-color;
+			}
+		}
+
+		.entry-header {
+			padding: 0;
+			border: 0;
+			margin: 0;
+		}
+
+		.entry h2,
+		.plural .entry p {
+			margin: 0 auto 0.375rem;
+			max-width: 24rem;
+		}
+}
+ 
+.pagination {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+
+	span, a {
+		display: inline-block;
+		padding: 0.375rem 1rem;
+		background: #DDD;
+	}
+
+	a {
+		background: $primary-color;
+		color: #FFF;
+	}
+}

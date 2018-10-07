@@ -1,0 +1,56 @@
+/**
+ * Widgets
+ * --------------------------------------------------------------------------- */
+ 
+ .widget_recent_entries {
+	text-align: center;
+}
+ 
+.widget_recent_entries .widget-title {
+	margin: 0 auto 3rem;
+	font-size: 36px;
+	line-height: 1.35;
+	letter-spacing: -0.02em;
+}
+ 
+.widget_recent_entries a {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: -0.015em;
+	color: #333;
+}	
+ 
+.widget_recent_entries .post-date {
+	font-size: 14px;
+	line-height: 1.75;
+}
+ 
+.widget_recent_entries li:nth-child(odd) {
+	background: #f5f5f5;
+}
+ 
+.widget_recent_entries a, .widget_recent_entries .post-date { display: block; }
+ 
+.widget_recent_entries ul, 
+.widget_pages ul, 
+.widget_categories ul, 
+.widget_archive ul, 
+.widget_recent_comments ul, 
+.widget_nav_menu ul, 
+.widget_links ul ul {
+	margin: 0;
+	list-style-type: none;
+	border: 1px solid #CCC;
+}
+ 
+	.widget_recent_entries li, 
+	.widget_pages li, 
+	.widget_categories li, 
+	.widget_archive li, 
+	.widget_recent_comments li, 
+	.widget_nav_menu li, 
+	.widget_links li {
+		padding: 1.5rem;
+		border-bottom: 1px solid #CCC;
+	}

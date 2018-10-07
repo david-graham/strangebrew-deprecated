@@ -1,0 +1,22 @@
+/**
+ * Footer
+ * --------------------------------------------------------------------------- */
+ 
+#footer {
+    padding-top: 1.5rem;
+	background-color: $secondary-color;
+    line-height: 1.75;
+	font-size: 14px;
+	color: $transparent-light;
+    text-align: center;
+	overflow: hidden;
+	
+	a {
+		font-weight: 600;
+		color: $transparent-lighter;
+		&:hover {
+			color: #FFF; 
+		}
+	}
+
+}

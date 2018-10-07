@@ -1,0 +1,12 @@
+/* === Clearing Floats === */
+ 
+.clearfix::after,
+#header::after,
+#content::after,
+#footer > .wrap::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}

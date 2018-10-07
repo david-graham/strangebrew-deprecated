@@ -1,0 +1,114 @@
+/**
+ * Defaults
+ * --------------------------------------------------------------------------- */
+ 
+/* === Box model === */
+ 
+*, *::before, *::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+/* === Body === */
+ 
+body {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: $text-color;
+	background: $body-background-color;
+}
+
+/* === Links === */
+ 
+a {
+	color: $primary-color;
+	text-decoration: none;
+}
+	
+ /* === Headings === */
+ 
+h1, h2, h3 {
+	margin: 0 0 0.75rem;
+	font-weight: 700;
+	color: $heading-color;
+	a {
+		color: $heading-color;
+	}
+}
+ 
+h1 {
+	font-size: 36px;
+	line-height: 1.3335;
+	letter-spacing: -0.03em;
+}
+ 
+h2 {
+	font-size: 24px;
+	line-height: 1.5;
+	letter-spacing: -0.02em;
+}
+ 
+h3,
+.plural .entry-title,
+.archive-description {
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: -0.005em;
+}
+ 
+h3 { font-weight: 600; }
+ 
+/* === Paragraphs and lists === */
+ 
+p { margin: 0 0 1.5rem; }
+ 
+ol, ul { list-style: none; }
+ 
+ul {
+	list-style: disc;
+	margin: 0 0 1.5rem 2rem;
+}
+ 
+ol {
+	list-style-type: decimal;
+	margin: 0 0 1.5rem 2rem;
+}
+ 
+dl { margin: 0 0 1.5rem; }
+
+/* === Horizontal Rule === */
+
+hr { background: $border-color; }
+ 
+/* === Code and Preformatted text === */
+ 
+code { margin: 0 0 1.5rem; }
+pre { margin: 0 0 1.5rem; }
+ 
+/** === Images === */
+ 
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+ 
+/* === Gallery === */
+
+.gallery {
+	margin: 0;
+	padding-top: 0.75rem;
+}
+ 
+.gallery-item { margin-bottom: 1.5rem; }
+
+	.gallery-item img { outline: 6px solid $border-color; }
+
+	.gallery-caption { 
+		margin: 0.75rem 0 0rem; 
+		font-size: 14px;
+		line-height: 1.75;
+		font-style: italic;
+	}

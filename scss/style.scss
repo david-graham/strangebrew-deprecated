@@ -1,0 +1,51 @@
+/**
+ * Theme Name: StrangeBrew 3
+ * Theme URI: http://www.strangebrewdesign.com/recent-projects/strangebrew
+ * Description: A Hybrid Framework based theme for StrangeBrew Web Design
+ * Version: 1.0.0
+ * Author: David Graham
+ * Author URI: http://www.strangebrewdesign.com
+ * Tags: one-column, custom-background, custom-header, custom-menu, featured-images, post-formats, responsive-layout, threaded-comments, translation-ready
+ * Text Domain: strange-brew
+ * License: GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
+ * Fonts - Declare @font-face here.
+ * --------------------------------------------------------------------------- */
+ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800');
+
+@import "_partials/variables";
+@import "_partials/defaults";
+@import "_partials/forms";
+@import "_partials/layout";
+@import "_partials/header";
+@import "_partials/menu-primary";
+@import "_partials/archive";
+@import "_partials/singular";
+@import "_partials/comments";
+@import "_partials/footer";
+@import "_partials/widgets";
+@import "_partials/icons";
+@import "_partials/plugins";
+@import "_partials/clearfix";
+
+/**
+ * Media Queries
+ * --------------------------------------------------------------------------- */
+ 
+@media screen and (max-width: 960px) {
+	h3, 
+	.archive-description, 
+	.plural .entry-title, 
+	.singular .entry-summary { font-size: 18px; }
+}
+@media screen and (max-width: 640px) {
+	h1, 
+	.entry-content .headline { 
+		font-size: 30px; 
+		letter-spacing: -0.04em; 
+	}
+}

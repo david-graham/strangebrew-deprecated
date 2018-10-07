@@ -1,0 +1,76 @@
+/**
+* Icons
+* --------------------------------------------------------------------------- */
+
+.fa { color: $primary-color; }
+
+h2::after, 
+h2::before,
+h2 .fa,
+h3::after,
+h3::before,
+h3 .fa {
+    font-size: 0.9em;
+    position: relative;
+    top: -0.05em;
+    padding: 0 0.1em;
+}
+
+#menu-primary li a::after,
+#menu-primary li a::before,
+button::before,
+button::after,
+a.button::before,
+a.button::after {
+    font-family: "FontAwesome";
+    font-weight: 300;
+    margin-right: 9px;
+    vertical-align: bottom;
+}
+
+#menu-primary li a::after {
+    margin-right: 0;
+    margin-left: 9px;
+}
+
+#menu-primary li.menu-item-has-children > a::after {
+    content: '\f107';
+}
+
+#menu-primary button::after {
+    content: none;
+}
+
+button::after,
+a.button::after {
+    margin: 0 0 0 9px;
+    content: '\f0da';
+}
+
+#menu-primary a::before { color: inherit; }
+
+#menu-primary a:hover::before,
+#menu-primary li.current-menu-item a::before { color: $primary-color; }
+
+/* === Menu Icons === */
+.menu li a[href*="codepen.io"]::before { content: '\f1cb'; }
+.menu li a[href*="digg.com"]::before { content: '\f1a6'; }
+.menu li a[href*="dribbble.com"]::before { content: '\f17d'; }
+.menu li a[href*="dropbox.com"]::before { content: '\f16b'; }
+.menu li a[href*="facebook.com"]::before { content: '\f09a'; }
+.menu li a[href*="flickr.com"]::before { content: '\f16e'; }
+.menu li a[href*="plus.google.com"]::before { content: '\f0d5'; }
+.menu li a[href*="github.com"]::before { content: '\f09b'; }
+.menu li a[href*="instagram.com"]::before { content: '\f16d'; }
+.menu li a[href*="linkedin.com"]::before { content: '\f0e1'; }
+.menu li a[href*="pinterest.com"]::before { content: '\f0d2'; }
+.menu li a[href*="reddit.com"]::before { content: '\f1a1'; }
+.menu li a[href*="skype.com"]::before,
+.menu li a[href*="skype:"]::before { content: '\f17e'; }
+.menu li a[href*="stumbleupon.com"]::before { content: '\f1a4'; }
+.menu li a[href*="tumblr.com"]::before { content: '\f173'; }
+.menu li a[href*="twitter.com"]::before { content: '\f099'; }
+.menu li a[href*="vimeo.com"]::before { content: '\f194'; }
+.menu li a[href*="wordpress.org"]::before,
+.menu li a[href*="wordpress.com"]::before { content: '\f19a'; }
+.menu li a[href*="youtube.com"]::before { content: '\f16a'; }

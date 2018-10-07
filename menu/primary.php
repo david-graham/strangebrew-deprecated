@@ -1,6 +1,6 @@
 <?php if ( has_nav_menu( 'primary' ) ) : // Check if there's a menu assigned to the 'primary' location. ?>
 
-	<nav id="menu-primary" class="menu">
+	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
 
 		<?php wp_nav_menu(
 			array(

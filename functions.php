@@ -52,33 +52,41 @@ add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
 
 function hybrid_base_theme_setup() {
 
-	/* Theme layouts. */
+	// Theme layouts.
 	add_theme_support( 
 		'theme-layouts', 
 		array(
-			'1c'      		=> __( '1 Column',                    	'strange-brew' ),
-			'2c-l'    		=> __( '2 Columns: Content / Sidebar',	'strange-brew' ),
-			'2c-r'    		=> __( '2 Columns: Sidebar / Content',	'strange-brew' ),
-			'pagebuilder'   => __( 'Page Builder',         			'strange-brew' )
+			'1c-wide'      	=> __( '1 Column Boxed', 		'strange-brew' ),
+			'1c-narrow'    	=> __( '1 Column Boxed Narrow',	'strange-brew' ),
+			'pagebuilder'   => __( 'Page Builder',         	'strange-brew' )
 		),
-		array( 'default' => '1c' ) 
+		array( 'default' => '1c-wide' ) 
 	);
+
 	// Enable custom template hierarchy.
 	add_theme_support( 'hybrid-core-template-hierarchy' );
+
 	// The best thumbnail/image script ever.
 	add_theme_support( 'get-the-image' );
+
 	// Breadcrumbs. Yay!
 	add_theme_support( 'breadcrumb-trail' );
+
 	// Pagination.
 	add_theme_support( 'loop-pagination' );
+
 	// Nicer [gallery] shortcode implementation.
 	add_theme_support( 'cleaner-gallery' );
-	/* Better captions for themes to style. */
+
+	// Better captions for themes to style.
 	add_theme_support( 'cleaner-caption' );
+
 	// Post thumbnail support
 	add_theme_support( 'post-thumbnails' );
+
 	// Automatically add feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
+	
 	// Handle content width for embeds and images.
 	hybrid_set_content_width( 1000 );
 	

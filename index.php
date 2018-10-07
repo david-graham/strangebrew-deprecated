@@ -2,6 +2,8 @@
 
 <div class="wrap">
 
+	<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
+
 	<main <?php hybrid_attr( 'content' ); ?>>
 
 		<?php if ( hybrid_is_plural() ) : // If viewing a multi-post page ?>

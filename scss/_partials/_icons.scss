@@ -18,6 +18,7 @@ h3 .fa {
 
 #menu-primary li a::after,
 #menu-primary li a::before,
+.breadcrumb-trail a[rel=home]::before,
 button::before,
 button::after,
 a.button::before,
@@ -33,12 +34,15 @@ a.button::after {
     margin-left: 9px;
 }
 
-#menu-primary li.menu-item-has-children > a::after {
-    content: '\f107';
-}
+#menu-primary li.menu-item-has-children > a::after { content: '\f107'; }
 
-#menu-primary button::after {
-    content: none;
+#menu-primary button::after { content: none; }
+
+.breadcrumb-trail a[rel=home]::before { 
+    content: '\F015';
+    position: relative;
+    top: 1px;
+    margin: 0;
 }
 
 button::after,
@@ -53,6 +57,7 @@ a.button::after {
 #menu-primary li.current-menu-item a::before { color: $primary-color; }
 
 /* === Menu Icons === */
+
 .menu li a[href*="codepen.io"]::before { content: '\f1cb'; }
 .menu li a[href*="digg.com"]::before { content: '\f1a6'; }
 .menu li a[href*="dribbble.com"]::before { content: '\f17d'; }

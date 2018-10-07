@@ -6,11 +6,13 @@
 	max-width: 1096px;
 	margin: auto;
 }
+
+#below-site-header > .wrap {
+	margin: 1.5rem auto;
+}
  
 #content {
-	margin: 1.5rem auto;
 	padding: 0 3rem 3rem;
-	border-top: 0.75rem solid $primary-color;
 	background: #FFF;
 }
  
@@ -18,7 +20,9 @@
  
 .layout-1c-narrow {
 
-	#content { max-width: 950px; }
+	#below-site-header > .wrap { 
+		max-width: 950px; 
+	}
 
 	.entry-title,
 	.entry-content {
@@ -32,43 +36,27 @@
 /* === Page Builder === */
  
 .layout-pagebuilder {
+	background: #FFF;
 
-	#below-site-header { 
-		border-top: 0.75rem solid $primary-color;
-		background: #FFF; 
+	#below-site-header > .wrap { margin: 0 auto; }
+
+	.breadcrumb-trail {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 	}
-
-	#content {
-		margin: 0;
-		border: 0;
-		padding: 0 3rem;
-	}
-
 }
 
 @media screen and (max-width: 1160px) {
 	#below-site-header > .wrap {
-		max-width: 100%;
-	}
-	.layout-1c-wide #content {
-		margin: 0  auto; 
-		max-width: 100%;
-	}
-}
-
-@media screen and (max-width: 1012px) {
-	.layout-1c-narrow #content { 
-		margin: 0  auto; 
-		max-width: 100%;
+		max-width: 100% !important;
+		margin: 0 auto;
 	}
 }
 
 @media screen and (max-width: 640px) {
-	.layout-pagebuilder #content,
 	#content { padding: 0 1.5rem 3rem; }
-}
-
-@media screen and (max-width: 480px) {
-	.layout-pagebuilder #content { padding: 0 1.5rem; }
-	.singular-project #content { padding: 1.5rem; }
 }

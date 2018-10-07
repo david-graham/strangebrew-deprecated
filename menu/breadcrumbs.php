@@ -5,9 +5,7 @@
             'container'     => 'nav', 
             'separator'     => '>', 
             'show_on_front' => false,
-            'labels'        => array( 
-                'browse' => esc_html__( 'You are here:', 'strange-brew' ) 
-            ) 
+            'show_browse'   => false
         ) 
     ); ?>
 

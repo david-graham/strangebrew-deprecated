@@ -116,6 +116,40 @@ img {
   line-height: 1.75;
   font-style: italic; }
 
+/* === Embeds === */
+.wp-audio-shortcode,
+.wp-video-shortcode,
+audio,
+video,
+object,
+embed,
+iframe {
+  max-width: 100%;
+  margin-bottom: 1.5rem; }
+
+.wp-audio-shortcode,
+.wp-video-shortcode,
+audio,
+video {
+  display: block;
+  max-width: 100%; }
+
+.embed-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+
+.embed-wrap iframe,
+.embed-wrap object,
+.embed-wrap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%; }
+
 /**
  * Forms
  * --------------------------------------------------------------------------- */

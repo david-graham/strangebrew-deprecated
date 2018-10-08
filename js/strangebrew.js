@@ -71,6 +71,23 @@ jQuery( window ).ready( function() {
 	jQuery( '.nav-links li .prev' ).parent().addClass( 'nav-item-prev' );
 	jQuery( '.nav-links li .next' ).parent().addClass( 'nav-item-next' );
 
+	/* === Wrap embeds for responsive video === */
+
+	// Overrides WP's <div> wrapper around videos, which mucks with flexible videos.
+	jQuery( 'div[style*="max-width: 100%"] > video' ).parent().css( 'width', '100%' );
+
+	// blip.tv adds a second <embed> with "display: none".  We don't want to wrap that.
+	jQuery( 'object, embed, iframe' ).not( 'embed[style*="display"], [src*="soundcloud.com"]' ).wrap( '<div class="embed-wrap" />' );
+
+	// Removes the 'width' attribute from embedded videos and replaces it with a max-width.
+	jQuery( '.embed-wrap object, .embed-wrap embed, .embed-wrap iframe' ).attr( 
+		'width',
+		function( index, value ) {
+			jQuery( this ).attr( 'style', 'max-width: ' + value + 'px;' );
+			jQuery( this ).removeAttr( 'width' );
+		}
+	);
+
 	/* === Menu toggle. === */
 
 	// Adds our overlay div.

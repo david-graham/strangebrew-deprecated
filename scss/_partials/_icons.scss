@@ -63,6 +63,27 @@ a.button::after { content: '\f0da'; }
 #menu-primary button::after,
 .trail-begin::before { content: none; }
 
+.svg-featured {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    outline: 6px solid $border-color;
+    background: $border-color;
+}
+
+.svg-featured .svg-shape {
+    fill: $primary-color;
+}
+
+.svg-featured .svg-icon {
+    font-family: "FontAwesome";
+    font-size: 72px;
+    line-height: 1;
+    vertical-align: middle;
+    fill: #FFF;
+}
+
 /* === Menu Icons === */
 
 .menu a::before { color: inherit; }

@@ -67,6 +67,10 @@ function hybrid_base_enqueue_styles() {
 	// Load normalize base style.
 	wp_enqueue_style( 'hybrid-one-five' );
 
+	// Load FontAwesome style
+	wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome' );
+
 	// Load gallery style if 'cleaner-gallery' is active.
 	if ( current_theme_supports( 'cleaner-gallery' ) )
 		wp_enqueue_style( 'hybrid-gallery' );

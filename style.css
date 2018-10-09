@@ -311,7 +311,7 @@ textarea {
   background: #FFF; }
 
 .home #content {
-  border-top: 0.75rem solid #F26419; }
+  border-top: 1.5rem solid #F26419; }
 
 .home.paged #content {
   border-top: 0; }
@@ -634,9 +634,12 @@ textarea {
   .plural .featured-media img {
     margin: auto;
     outline: 6px solid #CCC; }
+  .plural .featured-media a:focus svg,
+  .plural .featured-media a:hover svg,
   .plural .featured-media a:focus img,
   .plural .featured-media a:hover img {
-    outline-color: #F26419; }
+    outline-color: #F26419;
+    background: #F26419; }
 
 .plural .entry-wrap {
   overflow: hidden; }
@@ -1011,6 +1014,24 @@ a.button::after {
 #menu-primary button::after,
 .trail-begin::before {
   content: none; }
+
+.svg-featured {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  outline: 6px solid #CCC;
+  background: #CCC; }
+
+.svg-featured .svg-shape {
+  fill: #F26419; }
+
+.svg-featured .svg-icon {
+  font-family: "FontAwesome";
+  font-size: 72px;
+  line-height: 1;
+  vertical-align: middle;
+  fill: #FFF; }
 
 /* === Menu Icons === */
 .menu a::before {

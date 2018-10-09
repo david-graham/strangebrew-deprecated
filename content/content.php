@@ -67,6 +67,11 @@
 
 			<header class="entry-header">
 				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
+				<?php if ( is_sticky() ) : ?>
+					<div class="entry-summary">
+						<?php the_excerpt(); ?>
+					</div>
+				<?php endif; ?>
 				<div class="entry-byline">
 					<time class="entry-published"><?php echo get_the_date(); ?></time>
 				</div><!-- .entry-byline -->

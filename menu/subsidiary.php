@@ -8,6 +8,8 @@
 				'container'       => '',
 				'menu_id'         => 'menu-subsidiary-items',
 				'menu_class'      => 'menu-items',
+				'link_before'	  => '<span>',
+				'link_after'	  => '</span>',
 				'fallback_cb'     => '',
 				'depth'			  => 1,
 				'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'

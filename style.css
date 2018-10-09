@@ -29,7 +29,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #666;
-  background: #DDD; }
+  background: #DDD;
+  overflow-wrap: break-word; }
 
 /* === Links === */
 a {
@@ -561,6 +562,12 @@ textarea {
       left: -9999em; }
     .breadcrumb-trail .trail-items .trail-begin {
       margin-left: 0; }
+    .breadcrumb-trail .trail-items .trail-end {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 20%;
+      vertical-align: bottom; }
 
 @media screen and (max-width: 480px) {
   .breadcrumb-trail {
@@ -571,13 +578,16 @@ textarea {
  * --------------------------------------------------------------------------- */
 #menu-subsidiary .menu-items {
   list-style: none;
-  margin: 0 0 1.5rem; }
+  margin: 0 0 0.75rem; }
 
 #menu-subsidiary .menu-item {
   display: inline-block;
   margin: 0 0.75rem; }
   #menu-subsidiary .menu-item a {
     display: block; }
+  #menu-subsidiary .menu-item span {
+    position: absolute;
+    left: -9999em; }
 
 /**
 * Archives
@@ -585,12 +595,6 @@ textarea {
 .plural #content {
   display: flex;
   flex-wrap: wrap; }
-
-.plural .entry {
-  flex-grow: 1;
-  width: 27.5%;
-  margin: 0 1rem 3rem;
-  text-align: center; }
 
 .plural .archive-header {
   width: 100%;
@@ -604,6 +608,12 @@ textarea {
 @media screen and (max-width: 640px) {
   .plural .archive-header {
     padding: 2.25rem 0 1.5rem; } }
+
+.plural .entry {
+  flex-grow: 1;
+  width: 27.5%;
+  margin: 0 1rem 3rem;
+  text-align: center; }
 
 @media screen and (max-width: 960px) {
   .plural .entry {
@@ -622,6 +632,9 @@ textarea {
   .plural .featured-media a:hover img {
     outline-color: #F26419; }
 
+.plural .entry-wrap {
+  overflow: hidden; }
+
 .plural .entry-header {
   padding: 0;
   border: 0;
@@ -635,8 +648,21 @@ textarea {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.65;
-  text-align: center; }
+  line-height: 1.65; }
+
+@media screen and (min-width: 641px) {
+  .plural .sticky {
+    width: 100%;
+    text-align: left; }
+    .plural .sticky .featured-media {
+      float: left;
+      margin: 0 2.25rem 0.75rem 0;
+      width: 46.95%; }
+    .plural .sticky .entry-title {
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem; } }
 
 .pagination {
   width: 100%;
@@ -805,7 +831,7 @@ ol.comment-list {
 /* Comment Form */
 .comment-form {
   padding-bottom: 1.5rem;
-  margin: 0 3rem; }
+  margin: 0 2.25rem; }
 
 .comments-closed,
 .comment-respond .logged-in-as,
@@ -819,6 +845,9 @@ ol.comment-list {
 .comment-respond .comment-form-author,
 .comment-respond .comment-form-email {
   width: calc( 50% - 0.75rem); }
+
+.comment-respond .comment-form-author {
+  margin-right: 1.5rem; }
 
 .comment-respond .comment-form-author {
   float: left; }
@@ -837,7 +866,10 @@ ol.comment-list {
     width: calc( 100% + 3rem);
     margin-left: -1.5rem;
     border-left-width: 0px;
-    border-right-width: 0px; } }
+    border-right-width: 0px; }
+  .comment-respond .comment-form-author,
+  .comment-respond .comment-form-email {
+    width: 100%; } }
 
 /**
  * Footer
@@ -915,13 +947,21 @@ ol.comment-list {
 .menu a:focus::after,
 .menu a:hover::before,
 .menu a:hover::after,
-.menu li.current-menu-item a::before {
+.menu li.current-menu-item a::before,
+h2 a::before,
+h2 a::after,
+h3 a::before,
+h3 a::after {
   color: #F26419; }
 
 .menu li a::after,
 .menu li a::before,
 .breadcrumb-trail a[rel=home]::before,
 .trail-item::before,
+h2 a::before,
+h2 a::after,
+h3 a::before,
+h3 a::after,
 button::before,
 button::after,
 a.button::before,
@@ -937,15 +977,26 @@ a.button::after {
   margin-right: 0;
   margin-left: 0.75rem; }
 
+h2 a::before {
+  margin-right: 0.5rem; }
+
+h2 a::after,
+h3 a::after {
+  margin-right: 0;
+  margin-left: 0.5rem; }
+
 #menu-primary li.menu-item-has-children > a::after {
   content: '\f107'; }
 
 .breadcrumb-trail a[rel=home]::before {
-  content: '\F015';
+  content: '\f015';
   margin: 0; }
 
 .trail-item::before {
-  content: '\F105'; }
+  content: '\f105'; }
+
+.sticky .entry-title a::after {
+  content: '\f08d'; }
 
 button::after,
 a.button::after {

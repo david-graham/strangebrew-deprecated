@@ -7,12 +7,20 @@
 .menu a:focus::after,
 .menu a:hover::before,
 .menu a:hover::after,
-.menu li.current-menu-item a::before { color: $primary-color; }
+.menu li.current-menu-item a::before,
+h2 a::before,
+h2 a::after,
+h3 a::before,
+h3 a::after { color: $primary-color; }
 
 .menu li a::after,
 .menu li a::before,
 .breadcrumb-trail a[rel=home]::before,
 .trail-item::before,
+h2 a::before,
+h2 a::after,
+h3 a::before,
+h3 a::after,
 button::before,
 button::after,
 a.button::before,
@@ -30,21 +38,27 @@ a.button::after {
     margin-left: 0.75rem;
 }
 
+h2 a::before { margin-right: 0.5rem; }
+
+h2 a::after,
+h3 a::after {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
 #menu-primary li.menu-item-has-children > a::after { content: '\f107'; }
 
 .breadcrumb-trail a[rel=home]::before { 
-    content: '\F015';
+    content: '\f015';
     margin: 0; 
 }
 
-.trail-item::before {
-    content: '\F105';
-}
+.trail-item::before { content: '\f105'; }
+
+.sticky .entry-title a::after { content: '\f08d'; }
 
 button::after,
-a.button::after {
-    content: '\f0da';
-}
+a.button::after { content: '\f0da'; }
 
 #menu-primary button::after,
 .trail-begin::before { content: none; }

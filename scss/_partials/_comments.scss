@@ -142,7 +142,7 @@
  
 	.comment-form { 
 		padding-bottom: 1.5rem;
-		margin: 0 3rem; 
+		margin: 0 2.25rem; 
 	}
  
 		.comments-closed,
@@ -154,6 +154,8 @@
  
 		.comment-respond .comment-form-author,
 		.comment-respond .comment-form-email { width: calc( 50% - 0.75rem ); }
+
+		.comment-respond .comment-form-author { margin-right: 1.5rem; }
 
 		.comment-respond .comment-form-author { float: left; }
 		.comment-respond .comment-form-email { float: right; }
@@ -170,4 +172,6 @@
 		border-left-width: 0px;
 		border-right-width: 0px;
 	}
+	.comment-respond .comment-form-author,
+	.comment-respond .comment-form-email { width: 100%; }
 }

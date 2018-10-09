@@ -1,14 +1,4 @@
 <?php
-/**
- * Add classes, IDs, and other attributes.  Adds Schema.org support.
- *
- * @package    HybridBase
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2013 - 2018, Justin Tadlock
- * @link       http://themehybrid.com/themes/hybrid-base
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * 
- */
 
 # Attributes for major structural elements.
 add_filter( 'hybrid_attr_body',    'hybrid_base_attr_body',    5    );

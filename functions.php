@@ -35,6 +35,7 @@ $hybrid_base_dir = trailingslashit( get_template_directory() );
 // Load the Hybrid Core framework and theme files.
 require_once( $hybrid_base_dir . 'library/hybrid.php'       		);
 require_once( $hybrid_base_dir . 'inc/functions-attributes.php'     );
+require_once( $hybrid_base_dir . 'inc/functions-filters.php'   		);
 require_once( $hybrid_base_dir . 'inc/functions-icons.php'      	);
 require_once( $hybrid_base_dir . 'inc/strangebrew.php'      		);
 

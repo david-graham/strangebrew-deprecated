@@ -146,4 +146,11 @@ jQuery( window ).ready( function() {
 		e.stopPropagation();
 	} );
 
+	// Allow keyboard users to tab through multi-level menu
+	jQuery('#menu-primary').on('focus', '.sub-menu li a', function() {   
+		jQuery(this).parents('.sub-menu').addClass('focus');
+	}).on('blur', '.sub-menu li a', function() {
+		jQuery(this).parents('.sub-menu').removeClass('focus');
+	}); 
+
 } );

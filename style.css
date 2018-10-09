@@ -313,6 +313,9 @@ textarea {
 .home #content {
   border-top: 0.75rem solid #F26419; }
 
+.home.paged #content {
+  border-top: 0; }
+
 /* === 1 Column Narrow === */
 .layout-1c-narrow #below-site-header > .wrap {
   max-width: 950px; }

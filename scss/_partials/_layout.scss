@@ -17,6 +17,7 @@
 }
 
 .home #content { border-top: 0.75rem solid $primary-color; }
+.home.paged #content { border-top: 0; }
  
 /* === 1 Column Narrow === */
  

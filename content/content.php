@@ -38,30 +38,7 @@
 
 	<?php else : // If not viewing a single post. ?>
 
-		<div class="featured-media">
-			
-			<?php $default = "<img src='" . get_stylesheet_directory_uri() . "/images/default.jpg'>"; ?>
-			 
-			<?php 
-				$thumbnail = get_the_image( 
-					array( 
-						'echo'		   => false,
-						'size'         => 'post-thumbnail', 
-						'order'        => array( 'featured' ), 
-						'link_to_post' => is_singular() ? false : true
-					) 
-				); 
-			?>
-			
-			<?php 
-				if ( ! empty ( $thumbnail ) ) { 
-					echo $thumbnail;
-				} else {
-					echo $default; 
-				}
-			?>
-
-		</div><!-- .featured-media -->
+		<?php hybrid_base_featured_image();	?>
 
 		<div class="entry-wrap">
 

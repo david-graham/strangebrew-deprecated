@@ -46,9 +46,12 @@
 				outline: 6px solid $border-color;
 			}
 			
+			a:focus svg,
+			a:hover svg,
 			a:focus img,
 			a:hover img {
 				outline-color: $primary-color;
+				background: $primary-color;
 			}
 		}
 

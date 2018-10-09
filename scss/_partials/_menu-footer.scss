@@ -12,6 +12,10 @@
     .menu-item {
         display: inline-block;
         margin: 0 0.75rem;
+
+        a {
+            display: block;
+        }
     }
 
 }

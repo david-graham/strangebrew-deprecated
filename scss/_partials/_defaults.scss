@@ -27,9 +27,7 @@ a {
 	text-decoration: none;
 }
 
-a:focus {
-	text-decoration: underline;
-}
+a:focus { text-decoration: underline; }
 	
  /* === Headings === */
  
@@ -37,15 +35,20 @@ h1, h2, h3 {
 	margin: 0 0 0.75rem;
 	font-weight: 700;
 	color: $heading-color;
-	a {
-		color: $heading-color;
+
+	a { color: $heading-color; }
+	
+	a:hover,
+	a:focus { 
+		color: $primary-color; 
+		text-decoration: none;
 	}
 }
  
 h1 {
 	font-size: 36px;
 	line-height: 1.3335;
-	letter-spacing: -0.03em;
+	letter-spacing: -0.025em;
 }
  
 h2 {
@@ -55,14 +58,11 @@ h2 {
 }
  
 h3,
-.plural .entry-title,
-.archive-description {
+.plural .entry-title {
 	font-size: 20px;
 	line-height: 1.5;
-	letter-spacing: -0.005em;
+	letter-spacing: -0.015em;
 }
- 
-h3 { font-weight: 600; }
  
 /* === Paragraphs and lists === */
  
@@ -110,8 +110,10 @@ img {
 
 	.gallery-item img { outline: 6px solid $border-color; }
 
+	.gallery-item a:focus img { outline-color: $primary-color; }
+
 	.gallery-caption { 
-		margin: 0.75rem 0 0rem; 
+		margin: 1.5rem 0 0rem; 
 		font-size: 14px;
 		line-height: 1.75;
 		font-style: italic;

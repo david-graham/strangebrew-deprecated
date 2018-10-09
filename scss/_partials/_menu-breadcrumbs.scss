@@ -3,7 +3,6 @@
  * --------------------------------------------------------------------------- */
 
 .breadcrumb-trail {
-    flex: auto;
     background: $primary-color;
     padding: 0.75rem;
     color: #FFF;
@@ -20,11 +19,6 @@
             margin-left: 0.75rem;
         }
 
-        .trail-item:before {
-            content: '\B7';
-            margin-right: 0.75rem;
-        }
-
         a { 
             font-weight: bold; 
             color: #FFF;
@@ -36,8 +30,6 @@
         }
 
         .trail-begin { margin-left: 0; }
-
-        .trail-begin:before { content: none; }
 
     }
 

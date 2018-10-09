@@ -128,7 +128,8 @@
 			border-radius: 0;
 			box-shadow: none;
 			background: transparent;
-			font-size: 1.5rem;
+			font-size: 24px;
+			opacity: 1;
 
 			.fa { color: #FFF; }
 
@@ -139,7 +140,6 @@
 		}
 
 		.menu-items {
-			z-index: 9999;
 			display: block;
 			visibility: hidden;
 			position: fixed;
@@ -149,6 +149,7 @@
 			z-index: 999999;
 			overflow-y: auto;
 			width: 50vw;
+			transition: all .4s ease-in-out 0s;
 			background: $background-color;
 		}
 

@@ -36,6 +36,9 @@ a {
   color: #F26419;
   text-decoration: none; }
 
+a:focus {
+  text-decoration: underline; }
+
 /* === Headings === */
 h1, h2, h3 {
   margin: 0 0 0.75rem;
@@ -409,7 +412,8 @@ textarea {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.5); }
     #menu-primary .menu-item > a:focus, #menu-primary .menu-item > a:hover {
-      color: #FFF; }
+      color: #FFF;
+      text-decoration: none; }
   #menu-primary .current-menu-item > a {
     color: #FFF; }
   #menu-primary .sub-menu {
@@ -558,6 +562,17 @@ textarea {
 @media screen and (max-width: 480px) {
   .breadcrumb-trail {
     padding: 0.5rem; } }
+
+/**
+ * Footer Menu
+ * --------------------------------------------------------------------------- */
+#menu-subsidiary .menu-items {
+  list-style: none;
+  margin: 0 0 1.5rem; }
+
+#menu-subsidiary .menu-item {
+  display: inline-block;
+  margin: 0 0.75rem; }
 
 /**
 * Archives
@@ -833,8 +848,9 @@ ol.comment-list {
   #footer a {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.75); }
-    #footer a:hover {
-      color: #FFF; }
+    #footer a:focus, #footer a:hover {
+      color: #FFF;
+      text-decoration: none; }
 
 /**
  * Widgets
@@ -892,19 +908,8 @@ ol.comment-list {
 .fa {
   color: #F26419; }
 
-h2::after,
-h2::before,
-h2 .fa,
-h3::after,
-h3::before,
-h3 .fa {
-  font-size: 0.9em;
-  position: relative;
-  top: -0.05em;
-  padding: 0 0.1em; }
-
-#menu-primary li a::after,
-#menu-primary li a::before,
+.menu li a::after,
+.menu li a::before,
 .breadcrumb-trail a[rel=home]::before,
 button::before,
 button::after,
@@ -926,24 +931,24 @@ a.button::after {
   content: none; }
 
 .breadcrumb-trail a[rel=home]::before {
-  content: '\F015';
-  position: relative;
-  top: 1px;
-  margin: 0; }
+  content: '\F015'; }
 
 button::after,
 a.button::after {
   margin: 0 0 0 9px;
   content: '\f0da'; }
 
-#menu-primary a::before {
+/* === Menu Icons === */
+.menu a::before {
   color: inherit; }
 
-#menu-primary a:hover::before,
-#menu-primary li.current-menu-item a::before {
+.menu a:focus::before,
+.menu a:focus::after,
+.menu a:hover::before,
+.menu a:hover::after,
+.menu li.current-menu-item a::before {
   color: #F26419; }
 
-/* === Menu Icons === */
 .menu li a[href*="codepen.io"]::before {
   content: '\f1cb'; }
 
@@ -958,6 +963,9 @@ a.button::after {
 
 .menu li a[href*="facebook.com"]::before {
   content: '\f09a'; }
+
+.menu li a[href*="/feed"]::before {
+  content: '\f09e'; }
 
 .menu li a[href*="flickr.com"]::before {
   content: '\f16e'; }

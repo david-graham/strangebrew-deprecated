@@ -26,6 +26,10 @@ a {
 	color: $primary-color;
 	text-decoration: none;
 }
+
+a:focus {
+	text-decoration: underline;
+}
 	
  /* === Headings === */
  

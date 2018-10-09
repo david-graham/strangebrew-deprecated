@@ -14,8 +14,11 @@
 	a {
 		font-weight: 600;
 		color: $transparent-lighter;
+
+		&:focus,
 		&:hover {
 			color: #FFF; 
+			text-decoration: none;
 		}
 	}
 

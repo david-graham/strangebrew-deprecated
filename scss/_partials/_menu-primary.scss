@@ -43,7 +43,11 @@
 		color: $transparent-light;
 
 		&:focus,
-		&:hover { color: #FFF;	}
+		&:hover { 
+			color: #FFF;
+			text-decoration: none;	
+		}
+
 	}
 
 	.current-menu-item > a { color: #FFF; }

@@ -310,6 +310,9 @@ textarea {
   padding: 0 3rem 3rem;
   background: #FFF; }
 
+.home #content {
+  border-top: 0.75rem solid #F26419; }
+
 /* === 1 Column Narrow === */
 .layout-1c-narrow #below-site-header > .wrap {
   max-width: 950px; }

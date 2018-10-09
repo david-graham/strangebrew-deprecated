@@ -42,6 +42,7 @@
 		font-weight: bold;
 		color: $transparent-light;
 
+		&:focus,
 		&:hover { color: #FFF;	}
 	}
 
@@ -58,7 +59,7 @@
 	
 	#menu-primary {
 
-		li {
+		.menu-item {
 			position: relative;
 			float: left;
 			margin-left: 2.25rem;
@@ -66,15 +67,16 @@
 			a {	line-height: 96px; }
 		}
 
-		li:hover > .sub-menu { right: 0; }
-
+		.sub-menu.focus,
+		.menu-item:hover > .sub-menu { right: 0; }
+		
 		.sub-menu {
 			width: 18rem;
 			position: absolute;
 			right: 999em;
 			background: $background-color;
 
-			li {
+			.menu-item {
 				float: none;
 				margin: 0;
 				height: auto;
@@ -84,8 +86,9 @@
 					line-height: 1.65;
 				}
 			}
-
-			li:hover > .sub-menu { 
+			
+			.sub-menu.focus,
+			.menu-item:hover > .sub-menu { 
 				position: absolute; 
 				top: 0; 
 				right: 18rem; 
@@ -137,12 +140,11 @@
 			visibility: hidden;
 			position: fixed;
 			top: 96px;
-			padding-bottom: 96px;
+			bottom: 0;
 			right: -50vw;
 			z-index: 999999;
 			overflow-y: auto;
 			width: 50vw;
-			height: 100%;
 			background: $background-color;
 		}
 
@@ -162,7 +164,9 @@
 			position: absolute;
 			right: 999em;
 		}
-
+		
+		a:focus + .sub-menu,
+		.sub-menu.focus,
 		.menu-item:hover > .sub-menu {
 			position: relative;
 			right: 0;
@@ -172,7 +176,6 @@
 
 	.admin-bar #menu-primary .menu-items {
 		top: 128px;
-		padding-bottom: 128px;
 	}
 
 	#menu-primary.visible .menu-items {
@@ -187,7 +190,6 @@
 		#menu-primary {
 			.menu-items {
 				top: 142px;
-				padding-bottom: 142px;
 			}
 		}
 	}
@@ -211,14 +213,12 @@
 		}
 		.menu-items {
 			top: 72px;
-			padding-bottom: 72px;
 		}
 	}
 	.admin-bar {
 		#menu-primary {
 			.menu-items {
 				top: 118px;
-				padding-bottom: 118px;
 			}
 		}
 	}

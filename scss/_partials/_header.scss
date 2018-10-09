@@ -37,6 +37,8 @@
 				text-align: center;
 			}
 
+			a:focus { text-decoration: none; }
+
 			a:focus .fa::before,
 			&:hover .fa::before { 
 				content: '\f015';

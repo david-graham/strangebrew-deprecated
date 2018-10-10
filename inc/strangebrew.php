@@ -82,38 +82,3 @@ function hybrid_base_enqueue_styles() {
 	// Load active theme stylesheet.
 	wp_enqueue_style( 'hybrid-style' );
 }
-
-/**
- * Apply different layouts based on the content type
- */
-add_filter( 'theme_mod_theme_layout', 'hybrid_base_mod_theme_layout', 15 );
-
-function hybrid_base_mod_theme_layout( $layout ) {
- 
-	if ( is_singular( 'post' ) ) {
-       	$layout = '1c-narrow';
-    } else {
-		$layout = '1c-wide';
-	}
- 
-	return $layout;
-}
-
-/**
- * Apply css class to parent menu item & custom post type archive
- */
-add_filter( 'nav_menu_css_class', 'hybrid_base_active_item_classes', 10, 2 );
-
-function hybrid_base_active_item_classes($classes = array(), $menu_item = false) {
-    global $post;
-
-    // Get post ID, if nothing found set to NULL
-    $id = ( isset( $post->ID ) ? get_the_ID() : NULL );
-
-    // Checking if post ID exist...
-    if (isset( $id )){
-	    $classes[] = ($menu_item->url == get_post_type_archive_link($post->post_type)) ? 'current-menu-item' : '';
-    }
-
-    return $classes;
-}

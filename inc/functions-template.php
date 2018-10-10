@@ -15,7 +15,7 @@ function hybrid_base_featured_image( $args = array() ) {
 function hybrid_base_get_featured_image( $args = array() ) {
 
 	$defaults = array(
-		'size'         => 'post-thumbnail',
+		'size'         => is_singular() ? 'featured' : 'post-thumbnail',
 		'order'        => array( 'featured' ),
 		'before'       => '<div class="featured-media">',
 		'after'        => '</div>',
@@ -33,6 +33,9 @@ function hybrid_base_get_featured_image( $args = array() ) {
  */
 
 function hybrid_base_get_featured_fallback() {
+
+	if ( is_singular() )
+		return;
 
     $svg = sprintf(
 		'<div class="featured-media"><a href="%s">

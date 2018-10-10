@@ -7,6 +7,8 @@
 				<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 				
 				<p class="entry-byline">
+					<?php hybrid_post_author(); ?>
+					<span class="sep"><?php _ex( '&middot;', 'post meta separator', 'strange-brew' ); ?></span>
 					<time class="entry-published"><?php echo get_the_date(); ?></time>
 				</p><!-- .entry-byline -->
 				
@@ -14,15 +16,7 @@
 		
 			<div class="entry-wrap">
 			
-			<?php get_the_image( 
-				array( 
-					'size'         => 'featured', 
-					'order'        => array( 'featured' ), 
-					'link_to_post' => is_singular() ? false : true, 
-					'before'       => '<div class="featured-media">', 
-					'after'        => '</div>' 
-				) 
-			); ?>
+				<?php hybrid_base_featured_image(); ?>
 
 				<div <?php hybrid_attr( 'entry-content' ); ?>>
 					<?php the_content(); ?>
@@ -43,15 +37,19 @@
 		<div class="entry-wrap">
 
 			<header class="entry-header">
+
 				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
-				<?php if ( is_sticky() ) : ?>
+
+				<?php if ( is_sticky() && !is_paged() ) : // If post is stickied and it's the first page of the blog. ?>
 					<div class="entry-summary">
 						<?php the_excerpt(); ?>
 					</div>
 				<?php endif; ?>
+
 				<div class="entry-byline">
 					<time class="entry-published"><?php echo get_the_date(); ?></time>
 				</div><!-- .entry-byline -->
+				
 			</header><!-- .entry-header -->	
 		
 		</div><!-- .entry-wrap -->

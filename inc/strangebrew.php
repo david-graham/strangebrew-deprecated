@@ -23,8 +23,8 @@ add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_styles', 20 );
  */
 function hybrid_base_register_image_sizes() {
 
-	set_post_thumbnail_size( 454, 264, array( 'center', 'top') );
-	add_image_size( 'featured', 1000, 480, array( 'center', 'top') );
+	set_post_thumbnail_size( 454, 264, true );
+	add_image_size( 'featured', 1000, 480, true );
 }
 
 /**

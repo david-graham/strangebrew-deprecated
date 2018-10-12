@@ -32,8 +32,9 @@ function hybrid_base_register_image_sizes() {
  * Registers nav menu locations.
  */
 function hybrid_base_register_menus() {
-	register_nav_menu( 'primary',    _x( 'Primary',    'Primary', 'strange-brew' ) );
-	register_nav_menu( 'subsidiary', _x( 'Subsidiary', 'Subsidiary', 'strange-brew' ) );
+	register_nav_menu( 'primary',    _x( 'Primary', 'Primary', 'strange-brew' ) );
+	register_nav_menu( 'social', _x( 'Social', 'Social', 'strange-brew' ) );
+	register_nav_menu( 'footer', _x( 'Footer', 'Footer', 'strange-brew' ) );
 }
 
 /**

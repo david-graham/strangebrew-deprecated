@@ -2,7 +2,7 @@
 
 			<div class="wrap">
 
-				<?php hybrid_get_menu( 'subsidiary' ); // Loads the menu/subsidiary.php template. ?>
+				<?php hybrid_get_menu( 'social' ); // Loads the menu/social.php template. ?>
 
 				<p class="credit">
 					<?php printf(
@@ -15,6 +15,8 @@
 						esc_html__( 'Powered by %1$s and %2$s.', 'strange-brew' ), hybrid_get_wp_link(), hybrid_get_theme_link()
 					); ?>
 				</p><!-- .credit -->
+
+				<?php hybrid_get_menu( 'footer' ); // Loads the menu/footer.php template. ?>
 
 			</div><!-- .wrap -->
 

@@ -1,12 +1,12 @@
-<?php if ( has_nav_menu( 'subsidiary' ) ) : // Check if there's a menu assigned to the 'subsidiary' location. ?>
+<?php if ( has_nav_menu( 'social' ) ) : // Check if there's a menu assigned to the 'subsidiary' location. ?>
 
-	<nav <?php hybrid_attr( 'menu', 'subsidiary' ); ?>>
+	<nav <?php hybrid_attr( 'menu', 'social' ); ?>>
 
 		<?php wp_nav_menu(
 			array(
-				'theme_location'  => 'subsidiary',
+				'theme_location'  => 'social',
 				'container'       => '',
-				'menu_id'         => 'menu-subsidiary-items',
+				'menu_id'         => 'menu-social-items',
 				'menu_class'      => 'menu-items',
 				'link_before'	  => '<span>',
 				'link_after'	  => '</span>',
@@ -16,6 +16,6 @@
 			)
 		); ?>
 
-	</nav><!-- #menu-subsidiary -->
+	</nav><!-- #menu-social -->
 
 <?php endif; // End check for menu. ?>

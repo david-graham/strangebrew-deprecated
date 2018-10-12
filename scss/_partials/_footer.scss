@@ -3,12 +3,12 @@
  * --------------------------------------------------------------------------- */
  
 #footer {
-    padding-top: 1.5rem;
-	background-color: $secondary-color;
+    padding: 1.5rem 1.5rem 0;
     line-height: 1.75;
 	font-size: 14px;
 	color: $transparent-light;
     text-align: center;
+	background-color: $secondary-color;
 	overflow: hidden;
 	
 	a {
@@ -18,7 +18,6 @@
 		&:focus,
 		&:hover {
 			color: #FFF; 
-			text-decoration: none;
 		}
 	}
 

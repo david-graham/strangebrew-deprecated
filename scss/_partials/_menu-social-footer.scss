@@ -1,8 +1,9 @@
 /**
- * Footer Menu
+ * Social/Footer Menus
  * --------------------------------------------------------------------------- */
 
-#menu-subsidiary {
+#menu-social,
+#menu-footer {
 
     .menu-items {
         list-style: none;
@@ -22,5 +23,14 @@
             left: -9999em;
         }
     }
-
 }
+
+#menu-social {
+
+    a:focus,
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+#menu-footer { margin-bottom: 1.5rem; }

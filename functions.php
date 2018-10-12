@@ -83,6 +83,9 @@ function hybrid_base_theme_setup() {
 	// Better captions for themes to style.
 	add_theme_support( 'cleaner-caption' );
 
+	// Support Custom Content Portfolio plugin.
+	add_theme_support( 'custom-content-portfolio' );
+
 	// Post thumbnail support
 	add_theme_support( 'post-thumbnails' );
 

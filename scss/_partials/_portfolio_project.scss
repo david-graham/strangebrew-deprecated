@@ -1,0 +1,79 @@
+/* === Single Project === */
+ 
+.singular-portfolio_project {
+    
+    #content {
+        padding: 4.5rem 4.5rem 1.5rem;
+    }
+
+    .featured-media {
+        float: right;
+        max-width: 454px;
+        margin: 0 0 4.5rem 3rem;
+        border: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+        .featured-media img {
+            margin: auto;
+            outline: 6px solid #CCC;
+        }
+
+        .featured-media a { margin-top: 3rem; }
+
+    .entry-header {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .entry-content {
+        clear: both;
+        max-width: 100%;
+        margin-top: 3.75rem;
+        border-top: 1px solid #CCC;
+        padding-top: 2.25rem;
+    }
+
+   .entry-meta {
+        font-size: 14px;
+    }
+
+    .project-meta {
+        list-style-type: none;
+        margin-left: 0;
+    }
+
+    .project-key { font-weight: bold; }
+
+    @media screen and (max-width: 960px) {
+
+        .featured-media {
+            max-width: 45%;
+            margin-right: 2.25rem;
+        }
+
+        #content {	padding: 3rem 2.25rem; }
+    }
+
+    @media screen and (max-width: 640px) {
+
+        .featured-media {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto 3rem;
+        }
+
+        #content { padding: 3rem; }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        #content { 
+            padding: 1.5rem; 
+            border: 0;
+        }
+    }
+}

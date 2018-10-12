@@ -71,6 +71,9 @@ jQuery( window ).ready( function() {
 	jQuery( '.nav-links li .prev' ).parent().addClass( 'nav-item-prev' );
 	jQuery( '.nav-links li .next' ).parent().addClass( 'nav-item-next' );
 
+	// Adds a class to the Custom Content Portfolio link.
+	jQuery( '.singular-portfolio_project .project-link' ).addClass( 'button' );
+
 	/* === Wrap embeds for responsive video === */
 
 	// Overrides WP's <div> wrapper around videos, which mucks with flexible videos.

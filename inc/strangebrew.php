@@ -25,6 +25,7 @@ function hybrid_base_register_image_sizes() {
 
 	set_post_thumbnail_size( 454, 264, true );
 	add_image_size( 'featured', 1000, 480, true );
+	add_image_size( 'portfolio-featured', 454, 336, true );
 }
 
 /**

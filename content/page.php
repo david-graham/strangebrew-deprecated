@@ -2,9 +2,13 @@
 
 	<?php if ( is_page() ) : // If viewing a single page. ?>
 		
-		<header class="entry-header">
-			<h1 class="headline" itemprop="headline"><?php single_post_title(); ?></h1>
-		</header><!-- .entry-header -->
+		<?php $hide_header = get_post_meta( get_the_id(), 'strangebrew_hide_entry_header', $single ); ?>
+			
+		<?php if ( ! $hide_header ) :	?>
+			<header class="entry-header">
+				<h1 class="headline" itemprop="headline"><?php single_post_title(); ?></h1>
+			</header><!-- .entry-header -->
+		<?php endif; ?>
 
 		<?php get_the_image( 
 			array( 

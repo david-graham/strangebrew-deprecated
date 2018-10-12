@@ -15,11 +15,27 @@
 	padding: 0 3rem 3rem;
 	background: #FFF;
 }
-
-.home #content { border-top: 1.5rem solid $primary-color; }
-.home.paged #content { border-top: 0; }
  
 /* === 1 Column Narrow === */
+
+.layout-1c-narrow.home #content,
+.layout-1c-wide.home #content { border-top: 1.5rem solid $primary-color; }
+
+.home.paged #content { border-top: 0; }
+
+@media screen and ( max-width: 1140px ) {
+	.layout-1c-narrow.home #content,
+	.layout-1c-wide.home #content {
+		border-top-width: 0.75rem;
+	}
+}
+
+@media screen and ( max-width: 960px ) {
+	.layout-1c-narrow.home #content,
+	.layout-1c-wide.home #content {
+		border-top-width: 0;
+	}
+}
  
 .layout-1c-narrow {
 
@@ -61,5 +77,5 @@
 }
 
 @media screen and (max-width: 640px) {
-	#content { padding: 0 1.5rem 3rem; }
+	#content { padding: 0 2.25rem 2.25rem; }
 }

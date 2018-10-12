@@ -9,6 +9,9 @@ add_filter( 'nav_menu_css_class', 'hybrid_base_active_item_classes', 10, 2 );
 # Filter the except length to 40 words.
 add_filter( 'excerpt_length', 'hybrid_base_custom_excerpt_length', 999 );
 
+# Filter post classes
+add_filter( 'post_class', 'hybrid_base_post_class' );
+
 /**
  * Apply different layouts based on the content type
  */
@@ -47,6 +50,21 @@ function hybrid_base_active_item_classes($classes = array(), $menu_item = false)
 function hybrid_base_custom_excerpt_length( $length ) {
 
     return 40;
+}
+
+/**
+ * Adds custom post classes.
+ */
+function hybrid_base_post_class( $classes ) {
+
+	if ( is_singular() )
+		return $classes;
+
+	if ( function_exists( 'ccp_is_project_sticky' ) && ccp_is_project_sticky() && ! in_array( 'sticky', $classes ) ) {
+		$classes[] = 'sticky';
+	}
+
+	return $classes;
 }
 
 ?>

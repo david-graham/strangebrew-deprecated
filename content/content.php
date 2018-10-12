@@ -13,22 +13,18 @@
 				</p><!-- .entry-byline -->
 				
 			</header><!-- .entry-header -->
-		
-			<div class="entry-wrap">
 			
-				<?php hybrid_base_featured_image(); ?>
+			<?php hybrid_base_featured_image(); ?>
 
-				<div <?php hybrid_attr( 'entry-content' ); ?>>
-					<?php the_content(); ?>
-					<?php wp_link_pages(); ?>
-				</div><!-- .entry-content -->
-		
-			</div><!-- .entry-wrap -->
+			<div <?php hybrid_attr( 'entry-content' ); ?>>
+				<?php the_content(); ?>
+				<?php wp_link_pages(); ?>
+			</div><!-- .entry-content -->
 
-				<footer class="entry-footer">
-					<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'strange-brew' ) ) ); ?>
-					<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( '%s', 'strange-brew' ) ) ); ?>
-				</footer><!-- .entry-footer -->
+			<footer class="entry-footer">
+				<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'strange-brew' ) ) ); ?>
+				<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( '%s', 'strange-brew' ) ) ); ?>
+			</footer><!-- .entry-footer -->
 
 	<?php else : // If not viewing a single post. ?>
 
@@ -38,7 +34,7 @@
 
 			<header class="entry-header">
 
-				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
+				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
 
 				<?php if ( is_sticky() && !is_paged() ) : // If post is stickied and it's the first page of the blog. ?>
 					<div class="entry-summary">

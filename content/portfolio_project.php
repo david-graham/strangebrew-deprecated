@@ -2,17 +2,7 @@
 
 	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 
-			<?php 
-				get_the_image( 
-					array( 
-						'size'         => 'portfolio-featured', 
-						'order'        => array( 'featured' ), 
-						'before'	   => '<div class="featured-media">',
-						'after'		   => '</div>',
-						'link_to_post' => is_singular() ? false : true
-					) 
-				); 
-			?>
+			<?php hybrid_base_featured_image();	?>
 
 			<header class="entry-header">
 				<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
@@ -48,26 +38,20 @@
 			</div><!-- .entry-content -->
 
 	<?php else : // If not viewing a single post. ?>
-
-		<div class="featured-media">
 			
-			<?php hybrid_base_featured_image();	?>
-			
-			<?php 
-				if ( ! empty ( $thumbnail ) ) { 
-					echo $thumbnail;
-				} else {
-					echo $default; 
-				}
-			?>
-
-		</div><!-- .featured-media -->
+		<?php hybrid_base_featured_image();	?>
 
 		<div class="entry-wrap">
 
 			<header class="entry-header">
-				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
-			</header><!-- .entry-header -->	
+				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
+			</header><!-- .entry-header -->					
+			
+			<?php if ( ccp_is_project_sticky() && !is_paged() ) : // If post is stickied and it's the first page of the blog. ?>
+				<div class="entry-summary">
+					<?php the_excerpt(); ?>
+				</div>
+			<?php endif; ?>
 			
 		</div><!-- .entry-wrap -->
 

@@ -14,8 +14,16 @@ function hybrid_base_featured_image( $args = array() ) {
  */
 function hybrid_base_get_featured_image( $args = array() ) {
 
+	$size = 'post-thumbnail';
+
+	if ( is_singular() )
+		$size = 'featured';
+
+	if ( is_singular( 'portfolio_project' ) )
+		$size = 'portfolio-featured';
+
 	$defaults = array(
-		'size'         => is_singular() ? 'featured' : 'post-thumbnail',
+		'size'         => $size,
 		'order'        => array( 'featured' ),
 		'before'       => '<div class="featured-media">',
 		'after'        => '</div>',

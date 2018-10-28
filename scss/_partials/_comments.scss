@@ -3,19 +3,13 @@
 #comments {
 	position: relative;
 	margin-bottom: 1.5rem;
-	border: 1px solid $border-color;
 }
  
 	/* Comments Number */
  
 	#comments-number {
-		padding: 1.5rem;
-		font-size: 22px;
-		border-bottom: 1px solid $border-color;
 		text-align: center;
 	}
- 
-		.has-comments-nav #comments-number { text-align: left; }
  
 	/* Comments Nav */
  
@@ -34,7 +28,7 @@
  
 	ol.comment-list {
 		list-style: none;
-		margin: 1.5rem;
+		margin: 0 0 3rem;
 	}
  
 		.comment-list ol.children {
@@ -42,17 +36,29 @@
 			margin-left: 0;
 		}
  
-		.comment-list .depth-1 > ol.children { margin-left: 4.5rem; }
- 
-		@media screen and ( max-width: 480px ) {
- 
-			.comment-list .depth-1 > ol.children { margin-left: 1.5rem; }
-		}
- 
 		/* Individual comments */
  
 		.comment,
-		.ping { clear: both; }
+		.ping { 
+			clear: both; 
+			border: 1px solid $border-color;
+			margin: 1.5rem 0;
+			padding: 1.5rem;
+		}
+
+		@media screen and ( max-width: 480px ) {
+			.comment,
+			.ping {
+				padding: 0 0 1.5rem;
+				border-width: 0;
+				border-bottom-width: 1px;
+			}
+			
+			.comment .comment {
+				padding: 0;
+				border: 0;
+			}
+		}
  
 		.ping { margin-bottom: 1.5rem; }
  
@@ -91,6 +97,12 @@
 			.comment-content {
 				overflow: hidden;
 				margin: 0 0 0.5rem;
+				font-size: 14px;
+				line-height: 1.715;
+			}
+
+			.comment-reply-link {
+				width: 100%;
 			}
  
 		.comment-reply-login {
@@ -104,21 +116,14 @@
  
 .comment-respond { 
 	margin-bottom: 1.5rem; 
-	border: 1px solid $border-color;
 }
- 
-	.comment-list .comment-respond { 
-		margin-bottom: 1.5rem; 
-	}
  
 	/* Comment reply title */
  
 	.comment-reply-title {
-		position: 	relative;
+		position: relative;
 		margin-bottom: 1.5rem;
-		padding: 	1.5rem;
-		text-align:		center;
-		border-bottom:	1px solid $border-color;
+		text-align: center;
 	}
  
 		#cancel-comment-reply-link {
@@ -129,21 +134,9 @@
 			background: none;
 		}
  
-		#cancel-comment-reply-link::after {
-			content: '\f00d';
-			width: 30px;
-			height: 30px;
-			line-height: 30px;
-			font-size: 14px;
-			border-bottom-left-radius: 5px;
-		}
- 
 	/* Comment Form */
  
-	.comment-form { 
-		padding-bottom: 1.5rem;
-		margin: 0 2.25rem; 
-	}
+	.comment-form {}
  
 		.comments-closed,
 		.comment-respond .logged-in-as,
@@ -160,18 +153,12 @@
 		.comment-respond .comment-form-author { float: left; }
 		.comment-respond .comment-form-email { float: right; }
 
-		.comment-respond textarea { min-height: 18rem; }
+		.comment-respond textarea { min-height: 15rem; }
 
 		.comment-respond .submit { width: 100%;	}
 
 @media only screen and ( max-width: 480px ) {
 
-	#comments, #respond {
-		width: calc( 100% + 3rem );
-		margin-left: -1.5rem;
-		border-left-width: 0px;
-		border-right-width: 0px;
-	}
 	.comment-respond .comment-form-author,
 	.comment-respond .comment-form-email { width: 100%; }
 }

@@ -16,7 +16,7 @@
 			<div class="wrap">
 
 				<div <?php hybrid_attr( 'branding' ); ?>>
-					<span id="site-title" itemprop="headline"><a href="<?php echo esc_url( home_url() ); ?>" rel="home"><i class="fa fa-code"></i> <?php bloginfo( 'name' ); ?></a></span>
+					<span id="site-title" itemprop="headline"><a href="<?php echo esc_url( home_url() ); ?>" rel="home"><i class="fa fa-code"></i><?php bloginfo( 'name' ); ?></a></span>
 				</div><!-- #branding -->
 
 				<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>

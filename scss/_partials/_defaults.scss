@@ -31,7 +31,7 @@ a {
 
 a:focus { text-decoration: underline; }
 	
- /* === Headings === */
+ /* === Headings (and some things that look like headings) === */
  
 h1, h2, h3 {
 	margin: 0 0 0.75rem;
@@ -47,23 +47,30 @@ h1, h2, h3 {
 	}
 }
  
-h1 {
+h1,
+.headline {
 	font-size: 36px;
 	line-height: 1.3335;
-	letter-spacing: -0.03em;
+	letter-spacing: -0.02em;
 }
  
 h2 {
 	font-size: 24px;
-	line-height: 1.5;
 	letter-spacing: -0.02em;
 }
  
 h3,
 .plural .entry-title {
 	font-size: 20px;
-	line-height: 1.5;
 	letter-spacing: -0.02em;
+}
+
+.archive-description, 
+.singular .entry-summary, 
+.sub-headline {
+    font-size: 20px;
+    line-height: 1.8;
+	letter-spacing: -0.01em;
 }
  
 /* === Paragraphs and lists === */
@@ -117,7 +124,7 @@ img {
 	.gallery-caption { 
 		margin: 1.5rem 0 0rem; 
 		font-size: 14px;
-		line-height: 1.75;
+		line-height: 1.715;
 		font-style: italic;
 	}
 
@@ -158,4 +165,4 @@ video {
 		width: 100%;
 		max-width: 100%;
 		height: 100%;
-	}
+	} 

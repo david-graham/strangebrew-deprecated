@@ -8,7 +8,7 @@
     color: #FFF;
     text-align: center;
     font-size: 14px;
-    line-height: 1.75;
+    line-height: 1.715;
 
     .trail-items {
         margin: 0;
@@ -30,14 +30,6 @@
         }
 
         .trail-begin { margin-left: 0; }
-
-        .trail-end {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 20%;
-            vertical-align: bottom;
-        }
 
     }
 

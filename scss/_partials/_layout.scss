@@ -11,31 +11,65 @@
 	margin: 1.5rem auto;
 }
  
-#content {
-	padding: 0 3rem 3rem;
-	background: #FFF;
-}
+	#content {
+		padding: 3rem 3rem 1.5rem;
+		background: #FFF;
+	}
+
+		#content > article > header,
+		#content > header {
+			width: 100%;
+			margin: -3rem 0 3rem;
+			padding: 4.5rem 0 3.75rem;
+		}
+
+		@media screen and (max-width: 960px) {
+
+			#content { 
+				padding: 2.25rem 2.25rem 0.75rem; 
+			}
+
+			#content > article > header,
+			#content > header {
+				margin: -2.25rem 0 2.25rem;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#content { 
+				padding: 1.5rem 1.5rem 0.75rem; 
+			}
+
+			#content > article > header,
+			#content > header {
+				margin-top: -1.5rem;
+				padding: 3rem 0 2.25rem;
+			}
+		}
+
+	.layout-1c-narrow.home #content,
+	.layout-1c-wide.home #content { 
+		border-top: 1.5rem solid $primary-color; 
+	}
+
+	.home.paged #content { border-top: 0; }
+
+	@media screen and ( max-width: 1140px ) {
+		.layout-1c-narrow.home #content,
+		.layout-1c-wide.home #content {
+			border-top-width: 0.75rem;
+		}
+	}
+
+	@media screen and ( max-width: 960px ) {
+		.layout-1c-narrow.home #content,
+		.layout-1c-wide.home #content {
+			border-top-width: 0;
+		}
+	}
  
 /* === 1 Column Narrow === */
-
-.layout-1c-narrow.home #content,
-.layout-1c-wide.home #content { border-top: 1.5rem solid $primary-color; }
-
-.home.paged #content { border-top: 0; }
-
-@media screen and ( max-width: 1140px ) {
-	.layout-1c-narrow.home #content,
-	.layout-1c-wide.home #content {
-		border-top-width: 0.75rem;
-	}
-}
-
-@media screen and ( max-width: 960px ) {
-	.layout-1c-narrow.home #content,
-	.layout-1c-wide.home #content {
-		border-top-width: 0;
-	}
-}
  
 .layout-1c-narrow {
 
@@ -50,7 +84,28 @@
 		margin-right: auto;
 	}
 	
+
+	@media screen and (max-width: 1040px) {
+		
+		#below-site-header > .wrap {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
 } 
+
+/* === 1 Column Wide === */
+
+.layout-1c-wide {
+
+	@media screen and (max-width: 1160px) {
+		
+		#below-site-header > .wrap {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+}
  
 /* === Page Builder === */
  
@@ -67,15 +122,8 @@
 		margin-left: -50vw;
 		margin-right: -50vw;
 	}
-}
 
-@media screen and (max-width: 1160px) {
-	#below-site-header > .wrap {
-		max-width: 100% !important;
-		margin: 0 auto;
+	#content {
+		padding: 0;
 	}
-}
-
-@media screen and (max-width: 640px) {
-	#content { padding: 0 2.25rem 2.25rem; }
 }

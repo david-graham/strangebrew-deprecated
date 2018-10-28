@@ -1,7 +1,7 @@
 <?php
 
 # Register custom image sizes.
-add_action( 'init', 'hybrid_base_register_image_sizes', 5 );
+add_action( 'after_setup_theme', 'hybrid_base_register_image_sizes', 5 );
 
 # Register custom menus.
 add_action( 'init', 'hybrid_base_register_menus', 11 );

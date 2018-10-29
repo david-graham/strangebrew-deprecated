@@ -74,7 +74,7 @@ h3,
 .singular .entry-summary,
 .sub-headline {
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 1.6;
   letter-spacing: -0.01em; }
 
 /* === Paragraphs and lists === */
@@ -545,7 +545,7 @@ a.button::after {
     margin-left: -50vw;
     margin-right: -50vw; }
   .layout-pagebuilder #content {
-    padding: 0; }
+    padding: 0 1.5rem; }
 
 /**
  * Header

@@ -1,0 +1,10 @@
+#customize-control-strangebrew-header-icon select,
+#customize-control-strangebrew-header-icon select option {
+	font-family: 'FontAwesome' !important;
+	font-size: 24px !important;
+}
+
+#customize-control-strangebrew-header-icon select {
+	height: 45px;
+	padding: 0 15px;
+}

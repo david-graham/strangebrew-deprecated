@@ -122,4 +122,18 @@ function hybrid_base_map_featured_icons() {
 	return apply_filters( 'hybrid_base_map_featured_icons', $icons );
 }
 
+
+/**
+ * Outputs the header icon.
+ */
+function hybrid_base_header_icon() {
+
+	$icon = get_theme_mod( 'header_icon' );
+
+	if ( empty( $icon ) )
+		return;
+	
+	echo hybrid_base_get_font_icon_html( $icon );	
+}
+
 ?>

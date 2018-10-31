@@ -3,6 +3,9 @@
 # Filter the theme layout.
 add_filter( 'theme_mod_theme_layout', 'hybrid_base_mod_theme_layout', 15 );
 
+# Filter the body class
+add_filter( 'body_class', 'hybrid_base_sticky_header_class' );
+
 # Filter menu classes.
 add_filter( 'nav_menu_css_class', 'hybrid_base_active_item_classes', 10, 2 );
 
@@ -25,6 +28,19 @@ function hybrid_base_mod_theme_layout( $layout ) {
  
 	return $layout;
 }
+
+/**
+ * Filter the body class to set sticky header
+ */
+function hybrid_base_sticky_header_class($classes) {
+
+	if ( get_theme_mod( 'sticky_header') === "1" ) {
+		$classes[] = 'sticky-header';
+	}
+
+	return $classes;
+}
+
 
 /**
  * Apply css class to parent menu item & custom post type archive

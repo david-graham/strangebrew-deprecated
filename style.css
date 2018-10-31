@@ -466,9 +466,6 @@ a.button::after {
   max-width: 1096px;
   margin: auto; }
 
-#below-site-header > .wrap {
-  margin: 1.5rem auto; }
-
 #content {
   padding: 3rem 3rem 1.5rem;
   background: #FFF; }
@@ -494,23 +491,6 @@ a.button::after {
     margin-top: -1.5rem;
     padding: 3rem 0 2.25rem; } }
 
-.layout-1c-narrow.home #content,
-.layout-1c-wide.home #content {
-  border-top: 1.5rem solid #F26419; }
-
-.home.paged #content {
-  border-top: 0; }
-
-@media screen and (max-width: 1140px) {
-  .layout-1c-narrow.home #content,
-  .layout-1c-wide.home #content {
-    border-top-width: 0.75rem; } }
-
-@media screen and (max-width: 960px) {
-  .layout-1c-narrow.home #content,
-  .layout-1c-wide.home #content {
-    border-top-width: 0; } }
-
 /* === 1 Column Narrow === */
 .layout-1c-narrow #below-site-header > .wrap {
   max-width: 950px; }
@@ -521,22 +501,26 @@ a.button::after {
   margin-left: auto;
   margin-right: auto; }
 
-@media screen and (max-width: 1040px) {
+@media screen and (min-width: 1161px) {
   .layout-1c-narrow #below-site-header > .wrap {
-    max-width: 100%;
-    margin: 0 auto; } }
+    margin: 1.5rem auto; } }
+
+@media screen and (max-width: 1160px) {
+  .layout-1c-narrow #below-site-header > .wrap {
+    max-width: 100%; } }
 
 /* === 1 Column Wide === */
+@media screen and (min-width: 1161px) {
+  .layout-1c-wide #below-site-header > .wrap {
+    margin: 1.5rem auto; } }
+
 @media screen and (max-width: 1160px) {
   .layout-1c-wide #below-site-header > .wrap {
-    max-width: 100%;
-    margin: 0 auto; } }
+    max-width: 100%; } }
 
 /* === Page Builder === */
 .layout-pagebuilder {
   background: #FFF; }
-  .layout-pagebuilder #below-site-header > .wrap {
-    margin: 0 auto; }
   .layout-pagebuilder .breadcrumb-trail {
     width: 100vw;
     position: relative;
@@ -546,6 +530,22 @@ a.button::after {
     margin-right: -50vw; }
   .layout-pagebuilder #content {
     padding: 0 1.5rem; }
+  .layout-pagebuilder #content > article > header,
+  .layout-pagebuilder #content > header {
+    margin-top: 0; }
+
+/* === Sticky Header === */
+:not(.admin-bar).sticky-header #header {
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+:not(.admin-bar).sticky-header #below-site-header {
+  padding-top: 6rem; }
+
+@media screen and (max-width: 480px) {
+  :not(.admin-bar).sticky-header #below-site-header {
+    padding-top: 4.5rem; } }
 
 /**
  * Header
@@ -554,7 +554,8 @@ a.button::after {
   background: #00375D;
   padding: 0 1.5rem;
   font-size: 15px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  z-index: 9999; }
 
 @media screen and (max-width: 960px) {
   #header {

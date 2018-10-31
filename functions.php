@@ -38,6 +38,7 @@ require_once( $hybrid_base_dir . 'inc/functions-attributes.php'     );
 require_once( $hybrid_base_dir . 'inc/functions-filters.php'   		);
 require_once( $hybrid_base_dir . 'inc/functions-icons.php'      	);
 require_once( $hybrid_base_dir . 'inc/functions-template.php'      	);
+require_once( $hybrid_base_dir . 'inc/customize.php'  			    );
 require_once( $hybrid_base_dir . 'inc/strangebrew.php'      		);
 
 // Do theme setup on the 'after_setup_theme' hook.

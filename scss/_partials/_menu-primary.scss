@@ -64,7 +64,7 @@
 			float: left;
 			margin-left: 2.25rem;
 
-			a {	line-height: 96px; }
+			a {	line-height: 6rem; }
 		}
 
 		.sub-menu.focus,
@@ -108,9 +108,9 @@
 			display: block;
 			margin: 0;
 			padding: 0;
-			width: 96px;
-			height: 96px;
-			line-height: 96px;
+			width: 6rem;
+			height: 6rem;
+			line-height: 6rem;
 			font-size: 1.5rem;
 			text-align: center;
 			color: #FFF;
@@ -124,7 +124,7 @@
 			border-radius: 0;
 			box-shadow: none;
 			background: transparent;
-			font-size: 24px;
+			font-size: 1.5rem;
 			opacity: 1;
 
 			.fa { color: #FFF; }
@@ -139,7 +139,7 @@
 			display: block;
 			visibility: hidden;
 			position: fixed;
-			top: 96px;
+			top: 6rem;
 			bottom: 0;
 			right: -50vw;
 			z-index: 999999;
@@ -176,7 +176,7 @@
 	}
 
 	.admin-bar #menu-primary .menu-items {
-		top: 128px;
+		top: calc( 6rem + 32px );
 	}
 
 	#menu-primary.visible .menu-items {
@@ -190,7 +190,7 @@
 	.admin-bar {
 		#menu-primary {
 			.menu-items {
-				top: 142px;
+				top: calc( 6rem + 46px );
 			}
 		}
 	}
@@ -208,18 +208,18 @@
 @media screen and (max-width: 480px) {
 	#menu-primary {
 		.menu-toggle {
-			height: 72px;
-			line-height: 72px;
-			width: 72px;
+			height: 4.5rem;
+			line-height: 4.5rem;
+			width: 4.5rem;
 		}
 		.menu-items {
-			top: 72px;
+			top: 4.5rem;
 		}
 	}
 	.admin-bar {
 		#menu-primary {
 			.menu-items {
-				top: 118px;
+				top: calc( 4.5rem + 46px );
 			}
 		}
 	}

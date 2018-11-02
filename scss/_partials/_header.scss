@@ -5,7 +5,7 @@
 #header {
 	background: $secondary-color;
 	padding: 0 1.5rem;
-	font-size: 15px;
+	font-size: 0.9375rem;
 	line-height: 1.6;
 	z-index: 9999;
 }
@@ -22,8 +22,8 @@
 
 		#site-title {
 			margin: 0;
-			line-height: 96px;
-			font-size: 24px;
+			line-height: 6rem;
+			font-size: 1.5rem;
 			font-weight: 900;
 			letter-spacing: -0.02em;
 
@@ -36,7 +36,7 @@
 				padding: 0.75rem;
 				background: $primary-color;
 				color: #FFF;
-				width: 48px;
+				width: 3rem;
 				text-align: center;
 			}
 
@@ -50,7 +50,7 @@
 
 		@media screen and (max-width: 480px) {
 			#site-title {
-				height: 72px;
-				line-height: 72px;
+				height: 4.5rem;
+				line-height: 4.5rem;
 			}
 		}

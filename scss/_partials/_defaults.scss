@@ -49,26 +49,26 @@ h1, h2, h3 {
  
 h1,
 .headline {
-	font-size: 36px;
+	font-size: 2.25rem;
 	line-height: 1.3335;
 	letter-spacing: -0.02em;
 }
  
 h2 {
-	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: -0.02em;
 }
  
 h3,
 .plural .entry-title {
-	font-size: 20px;
+	font-size: 1.25rem;
 	letter-spacing: -0.02em;
 }
 
 .archive-description, 
 .singular .entry-summary, 
 .sub-headline {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.6;
 	letter-spacing: -0.01em;
 }
@@ -123,7 +123,7 @@ img {
 
 	.gallery-caption { 
 		margin: 1.5rem 0 0rem; 
-		font-size: 14px;
+		font-size: 0.875rem;
 		line-height: 1.715;
 		font-style: italic;
 	}

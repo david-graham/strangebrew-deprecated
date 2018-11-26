@@ -23,6 +23,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* === HTML === */
+html {
+  font-size: 16px; }
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 15px; } }
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 14px; } }
+
 /* === Body === */
 body {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
@@ -45,6 +57,7 @@ a:focus {
 h1, h2, h3 {
   margin: 0 0 0.75rem;
   font-weight: 700;
+  line-height: 1.5;
   color: #222; }
   h1 a, h2 a, h3 a {
     color: #222; }
@@ -68,14 +81,13 @@ h2 {
 h3,
 .plural .entry-title {
   font-size: 1.25rem;
-  letter-spacing: -0.02em; }
+  letter-spacing: -0.01em; }
 
 .archive-description,
 .singular .entry-summary,
 .sub-headline {
   font-size: 1.25rem;
-  line-height: 1.6;
-  letter-spacing: -0.01em; }
+  line-height: 1.6; }
 
 /* === Paragraphs and lists === */
 p {

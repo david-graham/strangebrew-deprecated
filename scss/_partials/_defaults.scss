@@ -10,6 +10,18 @@
 	box-sizing: border-box;
 }
  
+/* === HTML === */
+
+html { font-size: 16px; }
+
+@media screen and ( max-width: 640px ) {
+	html { font-size: 15px; }
+}
+
+@media screen and ( max-width: 400px ) {
+	html { font-size: 14px; }
+}
+ 
 /* === Body === */
  
 body {
@@ -36,6 +48,7 @@ a:focus { text-decoration: underline; }
 h1, h2, h3 {
 	margin: 0 0 0.75rem;
 	font-weight: 700;
+	line-height: 1.5;
 	color: $heading-color;
 
 	a { color: $heading-color; }
@@ -62,7 +75,7 @@ h2 {
 h3,
 .plural .entry-title {
 	font-size: 1.25rem;
-	letter-spacing: -0.02em;
+	letter-spacing: -0.01em;
 }
 
 .archive-description, 
@@ -70,7 +83,6 @@ h3,
 .sub-headline {
     font-size: 1.25rem;
     line-height: 1.6;
-	letter-spacing: -0.01em;
 }
  
 /* === Paragraphs and lists === */
